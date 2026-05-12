@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이말년 서유기 - 1화</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* 웹툰 집중도를 위해 검은색 배경 */
+            font-family: -apple-system, sans-serif;
+        }
+
+        /* 상단 바 (제목 및 닫기) */
+        .viewer-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .viewer-header .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* 웹툰 이미지 영역 */
+        .comic-contents {
+            width: 100%;
+            max-width: 720px; /* PC에서도 웹툰 느낌이 나도록 가로 제한 */
+            margin: 0 auto;
+            padding-top: 50px; /* 헤더 공간 확보 */
+            padding-bottom: 60px; /* 푸터 공간 확보 */
+        }
+
+        .comic-contents img {
+            display: block;
+            width: 100%;
+            height: auto; /* 비율 유지 */
+            margin: 0;
+        }
+
+        /* 하단 내비게이션 바 */
+        .viewer-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-btn .icon {
+            font-size: 20px;
+            margin-bottom: 3px;
+        }
+
+        .btn-prev, .btn-next {
+            font-weight: bold;
+            color: #00d564; /* 네이버 그린 */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 상단 헤더 -->
+    <div class="viewer-header">
+        <span onclick="window.location.href = 'index.html'">〈</span>
+        <div class="title">스트레이트 훅 - 1화</div>
+        <span style="font-size: 20px;">⋮</span>
+    </div>
+
+    <!-- 웹툰 이미지 본문 (연속된 이미지) -->
+    <div class="comic-contents">
+        <!-- 
+            실제 웹툰처럼 이미지를 여러 장 넣으시면 됩니다. 
+            이미지 간 공백을 없애기 위해 display: block 처리를 해두었습니다.
+        -->
+        <img src="1화.png" alt="웹툰 본문 1">
+    </div>
+
+    <!-- 하단 푸터 -->
+    <div class="viewer-footer">
+        <div class="nav-btn btn-prev">
+            <span class="icon">◀</span>
+            <span>이전화</span>
+        </div>
+        <div class="nav-btn">
+            <span class="icon">💬</span>
+            <span>9,999+</span>
+        </div>
+        <div class="nav-btn">
+            <span class="icon">♥</span>
+            <span>좋아요</span>
+        </div>
+        <div class="nav-btn btn-next">
+            <span class="icon">▶</span>
+            <span>다음화</span>
+        </div>
+    </div>
+
+</body>
+</html>
